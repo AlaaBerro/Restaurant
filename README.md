@@ -1,2 +1,2 @@
 # Restaurant
-This is only HTML, CSS and JS . 
+This is only HTML, CSS and few JS . 
