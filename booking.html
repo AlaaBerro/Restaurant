@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="booking.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <nav> 
+        <div id="logo">La Vie</div>
+        <ul>
+           <li><a href="home.html" >Home</a></li>
+            <li><a href="menu.html" >Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="booking.html" class="book" id="current" >Booking</a></li>
+        </ul>
+        
+    </nav>
+
+<main>
+
+    <div class="container">
+       
+       <div class="title" >Welcome </div>
+
+       <form  action="#" id="form" name="myForm" onsubmit="return ValidateEmail()">
+           <div class="empty">
+
+            <div class="box">
+                <span class="details">First Name :</span>
+                <input type="text" name="name" placeholder="name" required>
+            </div>
+
+            <div class="box">
+                <span class="details">Last Name :</span>
+                <input type="text" placeholder="last name" required>
+            </div>
+
+             <div class="box">
+                <span class="details">Date :</span>
+                <input type="date"  required>
+            </div>
+
+            <div class="box">
+                <span class="details">Time :</span>
+                <input type="time" value="18:00" required>
+            </div>
+
+            <div class="box">
+                <span class="details"text>People :</span>
+                <input type="number" min="1" max="10" placeholder="number of people" required>
+            </div><br>
+
+            <div class="box">
+                <span class="details">Email :</span>
+                <input id="email" type="text" name="email" placeholder="example@gmail.com" >
+            </div>
+
+            <div class="box">
+                <span class="details">Phone :</span>
+                <input type="number" placeholder="+961 05-806-351" required>
+            </div>
+
+            <div class="box">
+                <span class="details">Comments</span>
+                <input type="text" placeholder="write here!" >
+            </div>
+
+            
+            <div class="button">
+                <input type="submit" value="Book A Table" >
+            </div>
+           </div>
+        </form>
+
+    </div>
+
+    <script >
+
+function ValidateEmail() {
+
+var email = document.myForm.email.value;
+var x = /^[a-zA-Z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}$/
+
+if(email.match(x)) {
+return true;
+
+} 
+else {
+
+alert("This Email Address is Invalid!");
+return false;
+
+}
+}
+</script>
+
+</main>
+</body>
+</html>
+
